@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>billpagers</title>
 </head>
 <body>
     <h1>This Is The Home Page Of My Webapp.</h1>
-    <img src="../static/puppy.jpg" width="60%">
+    <ul>
+        {% for item in name %}
+        <li>{{item }}</li>
+        {% endfor %}
+
+        {% if "rufus" in name %}
+        <p> we found rufus</p>
+        {% else %}
+        <p>rufus not found</p>
+        {% endif %}
+
+    </ul>
+    <img src="../static/puppy.jpg" width="20%">
 </body>
 </html>
